@@ -18,9 +18,7 @@ newserver.listen (3000, () => {
 const http = require('http');
 const express = require('express');
 
-// ------------------
-// Server A: Native HTTP
-// ------------------
+// http server 
 
 const rawServerPort = 3000;
 
@@ -40,9 +38,8 @@ rawServer.listen(rawServerPort, () => {
   console.log(`🛠️  HTTP server (raw) running at http://localhost:${rawServerPort}`);
 });
 
-// ------------------
-// Server B: Express
-// ------------------
+// express server
+
 
 const app = express();
 const expressPort = 4000;
@@ -65,4 +62,4 @@ app.use((req, res) => {
 app.listen(expressPort, () => {
   console.log(`⚡ Express server running at http://localhost:${expressPort}`);
 });
-
+ 
